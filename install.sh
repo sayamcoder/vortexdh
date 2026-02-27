@@ -60,8 +60,6 @@ cd /var/www/vortexdash
 # IMPORTANT: Replace this URL with your actual GitHub repository clone URL!
 # Example: git clone https://github.com/YourUsername/VortexDash.git .
 echo -e "${RED}NOTE: Script is cloning from a placeholder repo. Update the script with your real repo URL.${NC}"
-mkdir vortexdash
-cd vortexdash
 git clone https://github.com/sayamcoder/vortexdh .  <--- UNCOMMENT THIS WHEN READY
 
 
