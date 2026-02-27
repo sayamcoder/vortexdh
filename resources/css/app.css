@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vortex-purple: #8B5CF6;
+  --color-vortex-purple-hover: #7C3AED;
+  --color-vortex-dark: #0B0F19; /* Deeper, richer dark background */
+  --color-vortex-card: #151C2C; /* Slightly lighter for cards */
+}
+
+body {
+    background-color: var(--color-vortex-dark);
+    color: #e5e7eb;
+}
+
+/* --- Custom Vortex Animations --- */
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-blob {
+    animation: blob 10s infinite alternate;
+}
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-vortex-dark); }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-vortex-purple); }
